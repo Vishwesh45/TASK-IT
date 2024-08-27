@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskIt!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/fav-icon.png">
+    <link href="style.css" rel="stylesheet">
+    <link href="overview-styles.css" rel="stylesheet"> 
+</head>
+
+<body>
+    <header class="header text-white p-3 d-flex justify-content-between align-items-center">
+        <div class="d-flex align-items-center">
+            <img src="images/logo.jpg" alt="TaskIt Logo" class="mr-2" width="40" height="40">
+            <h1 class="h3 m-0">TaskIt!</h1>
+        </div>
+        <div class="d-flex align-items-center">
+            <button class="btn btn-outline-light mx-2" id="darkModeButton"><i class="fas fa-moon"></i></button>
+            <button id="loginButton" class="btn btn-outline-primary mx-2 text-white" data-toggle="modal" data-target="#loginModal"><i class="fas fa-lock text-white"></i></button>
+            <button id="signupButton" class="btn btn-outline-primary mx-2 text-white" data-toggle="modal" data-target="#signupModal"><i class="fas fa-user-plus text-white"></i></button>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1 class="text-center my-4 welcome-text">Welcome to <span class="taskit-text">TASK-IT!</span></h1>
+        <h4 class="text-center sub-heading mb-4">TaskIt! is a task management tool designed to help you stay organized and focused on your goals in day-to-day life.</h4>
+
+        <h2 class="text-center mb-4 highlighted-heading">Our Services</h2>
+
+
+        <div class="row mb-4">
+            <div class="col-md-6 mb-4">
+                <h3 class="feature-heading">Effortless Task Management</h3>
+                <p class="feature-text">Our user-friendly interface allows you to easily add, edit, and manage tasks. Create detailed checklists, add descriptions or subtasks, and set priority levels (High, Medium, or Low) to ensure you focus on what's important.</p>
+            </div>
+            <div class="col-md-6 mb-4">
+                <h3 class="feature-heading">Dynamic Task Organization</h3>
+                <p class="feature-text">Rearrange your tasks effortlessly with our drag-and-drop feature. Customize your task list dynamically to fit your changing needs and keep track of your productivity with total and completed task counts.</p>
+            </div>
+        </div>
+
+        <div class="row mb-4">
+            <div class="col-md-6 mb-4">
+                <h3 class="feature-heading">Personalized User Experience</h3>
+                <p class="feature-text">Access your personalized dashboard to view and update your details. Switch to dark mode for a comfortable viewing experience, especially in low-light environments, and reduce eye strain.</p>
+            </div>
+            <div class="col-md-6 mb-4">
+                <h3 class="feature-heading">Secure and Reliable</h3>
+                <p class="feature-text">While we integrate with our backend system, rest assured that your data is secure with us. Your task information is handled with utmost care, ensuring a safe and reliable experience.</p>
+            </div>
+        </div>
+
+        <div class="text-center mb-4">
+            <h3>Start Creating Your Checklist and Make Things Happen!</h3>
+            <button id="createNowButton" class="btn btn-primary mb-4" data-toggle="modal" data-target="#loginModal">Create Now</button>
+            <p class="mb-4">Join TaskIt today and take the first step towards a more organized and productive life. Click the "Create Now" button to get started and see how TaskIt can transform the way you manage your tasks.</p>
+        </div>
+
+        <div class="text-center mb-4">
+            <img src="images/mma.jpg" alt="Placeholder Image" class="img-fluid">
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content glassmorphism">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="loginEmail">Email</label>
+                            <input type="email" id="loginEmail" class="form-control" placeholder="Enter email">
+                        </div>
+                        <div class="form-group">
+                            <label for="loginPassword">Password</label>
+                            <input type="password" id="loginPassword" class="form-control" placeholder="Enter password">
+                        </div>
+                        <p>Not a member? <a href="#" data-toggle="modal" data-target="#signupModal" data-dismiss="modal">Signup now</a></p>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="loginSubmit">Login</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content glassmorphism">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="signupModalLabel">Signup</h5>
+                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="signupEmail">Email</label>
+                            <input type="email" id="signupEmail" class="form-control" placeholder="Enter email">
+                        </div>
+                        <div class="form-group">
+                            <label for="signupPassword">Password</label>
+                            <input type="password" id="signupPassword" class="form-control" placeholder="Enter password">
+                        </div>
+                        <div class="form-group">
+                            <label for="signupConfirmPassword">Confirm Password</label>
+                            <input type="password" id="signupConfirmPassword" class="form-control" placeholder="Enter confirm password">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="signupSubmit">Signup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="overview.js"></script>
+</body>
+
+</html>

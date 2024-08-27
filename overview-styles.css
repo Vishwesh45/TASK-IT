@@ -1,0 +1,150 @@
+
+/* Container and general styling */
+.container {
+    margin-top: 20px;
+}
+
+/* Header icons alignment */
+.header .btn {
+    margin: 0 5px;
+}
+
+/* Dark mode text visibility */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode .feature-heading {
+    color: #ffffff;
+}
+
+body.dark-mode .feature-text {
+    color: #b0b0b0;
+}
+
+/* Features styling */
+.feature {
+    margin-bottom: 20px;
+}
+
+.feature-heading {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+    animation: fadeIn 2s;
+}
+
+.feature-text {
+    font-size: 18px;
+    color: #666;
+}
+
+/* Welcome text styling */
+.welcome-text {
+    font-size: 32px;
+    font-weight: bold;
+    animation: fadeIn 1.5s;
+}
+.taskit-text {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.sub-heading {
+    font-size: 24px;
+    color: #555;
+    animation: fadeIn 1.5s;
+    animation-fill-mode: forwards; /* Add this line */
+    margin-bottom: 20px; /* Additional margin */
+}
+.highlighted-heading {
+        background-color: #bb00ff6b; /* Light background color */
+        padding: 5px; /* Padding around the text */
+        border-radius: 2px; /* Optional: add some rounded corners */
+        display: inline-block; 
+        margin: 0 auto;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Placeholder image styling */
+.text-center img {
+    width: 40%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+    
+    transition: all 0.3s ease-in-out; 
+}
+
+.text-center img:hover {
+    transform: scale(1.02); /* scale the image on hover */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4); /* increase the shadow on hover */
+}
+
+/* Additional margins */
+.mb-4 {
+    margin-bottom: 20px !important;
+}
+
+.mb-4 img {
+    margin-bottom: 20px;
+}
+
+
+/* Mobile devices (max-width: 768px) */
+@media only screen and (max-width: 768px) {
+    /* Container and general styling */
+    .container {
+        margin-top: 10px; /* Reduce margin top for mobile devices */
+    }
+
+    .header .btn {
+        margin: 1px !important; /* Remove margin altogether */
+    }
+
+    /* Features styling */
+    .feature {
+        margin-bottom: 10px; /* Reduce margin bottom for mobile devices */
+    }
+
+    .feature-heading {
+        font-size: 18px; /* Reduce font size for mobile devices */
+    }
+
+    .feature-text {
+        font-size: 16px; /* Reduce font size for mobile devices */
+    }
+
+    /* Welcome text styling */
+    .welcome-text {
+        font-size: 24px; /* Reduce font size for mobile devices */
+    }
+    .taskit-text {
+        font-size: 24px; /* Reduce font size for mobile devices */
+    }
+
+    .sub-heading {
+        font-size: 20px; /* Reduce font size for mobile devices */
+    }
+    .highlighted-heading {
+        font-size: 20px; /* Reduce font size for mobile devices */
+    }
+
+    /* Placeholder image styling */
+    .text-center img {
+        width: 60%; /* Increase width for mobile devices */
+        height: auto;
+        margin-bottom: 10px; /* Reduce margin bottom for mobile devices */
+    }
+}

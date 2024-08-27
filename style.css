@@ -1,0 +1,267 @@
+body {
+  background-color: #f0f0f0;
+  font-family: 'Rubik', sans-serif;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+/* Header styles */
+.header {
+  background-color: #bb00ffa3;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.5s;
+}
+
+.header img {
+  width: 40px;
+  height: 40px;
+  margin-right: 0.5rem;
+  border-radius: 4px;
+}
+
+.header h1 {
+  margin: 0;
+}
+
+.btn-outline-light {
+  margin-left: 0.5rem;
+  transition: color 0.5s, border-color 0.5s;
+}
+
+/* Welcome text and taskit text */
+.welcome-text {
+  display: block;
+  animation: fadeIn 2s ease-in-out;
+  animation-fill-mode: forwards;
+  text-align: center;
+}
+
+.taskit-text {
+  font-weight: bold;
+  color: #007bff;
+  text-align: center;
+}
+
+.sub-heading {
+  display: inline-block;
+  animation: fadeIn 2s ease-in-out 1s forwards;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  text-align: center;
+  margin-top: -0.5rem;
+}
+
+/* --Taskit text animation */
+.input-group {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.input-group > input[type="text"] {
+  width: 40%;
+}
+
+.input-group-append {
+  width: 60%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.input-group-append > input[type="text"] {
+  width: 40%;
+  margin-right: -1px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.input-group-append > select {
+  width: 20%;
+  margin-right: -1px;
+}
+
+.input-group-append > button {
+  width: 20%;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-radius: 5px;
+  
+}
+
+/* Animations for fading in and out */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeInTask 0.5s ease-in-out;
+}
+
+.fade-out {
+  animation: fadeOutTask 0.5s ease-in-out;
+}
+
+@keyframes fadeInTask {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOutTask {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+
+/* Completed task styles */
+.completed {
+  text-decoration: line-through;
+  color: gray;
+}
+
+/* Dark mode styles */
+.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.dark-mode .header {
+  background-color: #007afc99;
+  transition: background-color 0.5s;
+}
+
+.dark-mode .btn-outline-light {
+  color: #e0e0e0;
+  border-color: #e0e0e0;
+  transition: color 0.5s, border-color 0.5s;
+}
+.dark-mode .list-group-item {
+  color: #000000;
+}
+
+
+.priority-high {
+  background-color: #ffcccc;
+}
+
+.priority-medium {
+  background-color: #fff5cc;
+}
+
+.priority-low {
+  background-color: #ccffcc;
+}
+
+.priority-text-low {
+  background-color: #d4edda; /* Light green */
+  color: #155724;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.25rem;
+}
+
+.priority-text-medium {
+  background-color: #fff3cd; /* Light yellow */
+  color: #856404;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.25rem;
+}
+
+.priority-text-high {
+  background-color: #f8d7da; /* Light red */
+  color: #721c24;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.25rem;
+}
+
+/* Glassmorphism effect for modal */
+.glassmorphism {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 5px;
+  color: #fff;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+}
+
+/* styles for  Mobile devices (max-width: 480px) */
+@media only screen and (max-width: 480px) {
+  /* Header styles */
+  .header {
+    flex-direction: row; /* Change from column to row */
+    align-items: center;
+    justify-content: space-between; /* Add this to space out items */
+  }
+  .header img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px; /* Add some margin to separate from title */
+  }
+  .header h1 {
+    font-size: 18px;
+    margin: 0; /* Remove margin to align with image */
+  }
+  .btn-outline-light {
+    margin-left: 10px; /* Add some margin to separate from title */
+  }  
+
+   /* Input group styles */
+ .input-group {
+  flex-direction: column;
+}
+.input-group > input[type="text"] {
+  width: 100%;
+}
+.input-group-append {
+  width: 100%;
+  flex-direction: column;
+}
+.input-group-append > input[type="text"] {
+  width: 100%;
+  margin-right: 0;
+}
+.input-group-append > select {
+  width: 100%;
+  margin-right: 0;
+}
+.input-group-append > button {
+  width: 100%;
+}
+  /* Other styles */
+  .welcome-text {
+    font-size: 18px;
+    margin-top: -0.5rem;
+  }
+ .taskit-text {
+    font-size: 16px;
+    margin-top: -0.5rem;
+
+  }
+ .sub-heading {
+    font-size: 14px;
+    margin-top: -0.5rem;
+  }
+ .list-group-item {
+    padding: 10px;
+  }
+}
+

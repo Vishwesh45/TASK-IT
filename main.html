@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskIt!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/fav-icon.png">
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header text-white p-3 d-flex justify-content-between align-items-center">
+        <div class="d-flex align-items-center">
+            <img src="images/logo.jpg" alt="TaskIt Logo" class="mr-2" width="40" height="40">
+            <h1 class="h3 m-0">TaskIt!</h1>
+        </div>
+        <div class="d-flex align-items-center">
+            <button class="btn btn-outline-light ml-2" id="darkModeButton"><i class="fas fa-moon"></i></button>
+            <button class="btn btn-outline-light ml-2" id="profileButton" data-toggle="modal" data-target="#userDashboardModal"><i class="fas fa-user"></i></button>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1 class="text-center my-4 welcome-text">Welcome to <span class="taskit-text">TASK-IT!</span></h1>
+        <h3 class="text-center sub-heading">Your personal task assistant tool to help you stay organized and focused on your goals everyday</h3>
+        <div id="dateTime" class="text-center mb-4"></div>
+        <div class="input-group mb-3">
+            <input type="text" id="taskInput" class="form-control" placeholder="Enter new task">
+            <div class="input-group-append">
+              <input type="text" id="descriptionInput" class="form-control" placeholder="Enter task description">
+              <select id="priorityInput" class="custom-select">
+                <option value="low">Low Priority</option>
+                <option value="medium">Medium Priority</option>
+                <option value="high">High Priority</option>
+              </select>
+              <button id="addTaskButton" class="btn btn-primary" type="button">Add</button>
+              <button id="deleteAllButton" class="btn btn-danger" type="button">Delete All</button>
+            </div>
+          </div>
+        </div>
+        <ul id="taskList" class="list-group"></ul>
+        <div class="text-center mt-4">
+            <span>Total Tasks: <span id="totalTasks">0</span></span> | 
+            <span>Completed Tasks: <span id="completedTasks">0</span></span>
+        </div>
+    </div>
+
+    <div class="modal fade" id="userDashboardModal" tabindex="-1" aria-labelledby="userDashboardModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content glassmorphism">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="userDashboardModalLabel">User Dashboard</h5>
+                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h6>Account Information</h6>
+                    <p>Username: <span id="username"></span></p>
+                    <p>Email: <span id="email"></span></p>
+    
+                    <hr>
+    
+                    <h6>Actions</h6>
+                    <button type="button" class="btn btn-primary" id="change-password-button">Change Password</button>
+    
+                    <div id="change-password-form-container" style="display: none;">
+                        <form id="change-password-form">
+                            <div class="form-group">
+                                <label for="current-password">Current Password</label>
+                                <input type="password" id="current-password" class="form-control">
+                            </div>
+<div class="form-group">
+                                <label for="new-password">New Password</label>
+                                <input type="password" id="new-password" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="confirm-password">Confirm Password</label>
+                                <input type="password" id="confirm-password" class="form-control">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Change Password</button>
+                        </form>
+                    </div>
+    
+                    <hr>
+    
+                    <h6>Customization Options</h6>
+                    <p>Theme: <select id="theme-select">
+                        <option value="light">Light</option>
+                        <option value="dark">Dark</option>
+                    </select></p>
+    
+                    <hr>
+    
+                    <h6>Task Management</h6>
+                    <p>Total Tasks: <span id="total-tasks"></span></p>
+                    <p>Completed Tasks: <span id="completed-tasks"></span></p>
+    
+                    <hr>
+    
+                    <!-- Add more details about the user dashboard here -->
+    
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-danger" id="logout-button">Log Out</button>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
