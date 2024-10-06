@@ -4,6 +4,9 @@
 
 **Task-It** is a task management web application designed to empower users to efficiently manage their daily tasks. The application boasts a clean, intuitive interface that allows users to add, edit, and track tasks seamlessly. Task-It focuses on enhancing productivity through a variety of features, including motivational content to keep users inspired.
 
+## LINK
+https://taskitt.netlify.app/
+
 ## Features
 
 - **User Authentication**: Secure login and signup functionality for personalized task management.
