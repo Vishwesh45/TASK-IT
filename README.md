@@ -9,8 +9,8 @@ https://taskitt.netlify.app/
 
 ## Images
 
-![TaskIt Screenshot 1](images/interface0.png)
-![TaskIt Screenshot 2](images/interface.png)
+![TaskIt Screenshot 1](interface0.png)
+![TaskIt Screenshot 2](interface.png)
 ## Features
 
 - **User Authentication**: Secure login and signup functionality for personalized task management.
