@@ -1,6 +1,3 @@
-Here’s a `README.md` file description for your **Task-It** project, focused on the frontend:
-
-```markdown
 # Task-It
 
 ## Overview
@@ -13,6 +10,7 @@ Here’s a `README.md` file description for your **Task-It** project, focused on
 - **Task Management**: Create, edit, and delete tasks with ease.
 - **Task Completion Tracking**: Mark tasks as completed to monitor your progress.
 - **Dark Mode**: Toggle between light and dark themes for a comfortable viewing experience.
+- **Motivational Quotes and Stories**: Display random inspiring quotes and stories to encourage users.
 - **Responsive Design**: Optimized for various devices, ensuring a smooth user experience on both desktop and mobile platforms.
 
 ## Technologies Used
@@ -23,20 +21,6 @@ Here’s a `README.md` file description for your **Task-It** project, focused on
   - JavaScript
   - Bootstrap
   - jQuery
-
-## Getting Started
-
-To get started with Task-It, follow these steps:
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/task-it.git
-   ```
-2. Navigate to the project directory:
-   ```bash
-   cd task-it
-   ```
-3. Open `index.html` in your web browser to view the application.
 
 ## Future Enhancements
 
