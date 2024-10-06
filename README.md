@@ -8,7 +8,9 @@
 https://taskitt.netlify.app/
 
 ## Images
-![Task Management Interface](C:\Users\vishw\OneDrive\Pictures\Screenshots\interface0.png)
+
+![TaskIt Screenshot 1](images/interface0.png)
+![TaskIt Screenshot 2](images/interface.png)
 ## Features
 
 - **User Authentication**: Secure login and signup functionality for personalized task management.
